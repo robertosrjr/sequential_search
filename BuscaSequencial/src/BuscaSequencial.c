@@ -20,7 +20,14 @@ int main(void) {
 
 	resp_busca_sequencial = buscaSequencial(vec, num_a_ser_pesquisado, 10);
 
-	printf("O número %d foi encontrado na posição %d.", num_a_ser_pesquisado, resp_busca_sequencial);
+	if (resp_busca_sequencial == -1) {
+
+		printf("O número %d não foi encontrado.", num_a_ser_pesquisado);
+	} else {
+
+		printf("O número %d foi encontrado na posição %d.", num_a_ser_pesquisado, resp_busca_sequencial);
+	}
+
 
 	return EXIT_SUCCESS;
 }
